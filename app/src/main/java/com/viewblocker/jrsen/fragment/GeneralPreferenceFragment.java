@@ -98,7 +98,7 @@ public final class GeneralPreferenceFragment extends PreferenceFragmentCompat im
         SharedPreferences sp = getActivity().getSharedPreferences(SETTING_PREFS, Context.MODE_PRIVATE);
         int previousVersionCode = sp.getInt(KEY_VERSION_CODE, 0);
         if (previousVersionCode != BuildConfig.VERSION_CODE) {
-            showUpdatePolicyDialog();
+//            showUpdatePolicyDialog();
             sp.edit().putInt(KEY_VERSION_CODE, BuildConfig.VERSION_CODE).apply();
         } else if (!XposedEnvironment.isModuleActive(getContext())) {
             requestEnableModuleDialog();
